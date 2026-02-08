@@ -1,4 +1,6 @@
-/* 全体設定 */
+/* =========================
+   全体設定
+========================= */
 body {
   margin: 0;
   line-height: 1.7;
@@ -6,272 +8,244 @@ body {
   color: #222;
 }
 
-/* ヘッダー */
-/* ヘッダー全体の配置（左にタイトル、右にナビ）*/
-/* ========== ヘッダー（PC / モバイル共通） ========== */
+h2{
+  font-size:28px;
+  margin-bottom:40px;
+  text-align:center;
+}
+
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
-  border-bottom: 1px solid #eee;
-  /* 必要なら position: sticky; top:0; を追加して固定も可能 */
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 60px;
+  border-bottom:1px solid #eee;
 }
 
-/* nav 内のリストを横並びにする（デスクトップ） */
-.header nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 30px;         /* 項目間の余白 */
-  align-items: center;
+.header nav ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  gap:30px;
 }
 
-/* li の余計な余白を消す */
-.header nav ul li {
-  margin: 0;
-  padding: 0;
-}
-
-/* リンクの見た目 */
-.header nav a {
-  display: block;
-  text-decoration: none;
-  color: #222;
-  font-weight: 600;
-  padding: 4px 8px;
-  transition: all .15s ease; /* ホバーのアニメーションはここ */
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-/* ホバー + キーボード操作時の見た目（Tabで選んだ時も分かる） */
-.header nav a:hover,
-.header nav a:focus,
-.header nav a:focus-visible {
-  transform: translateY(-2px);
-  color: #000;
-  outline: none;
-  box-shadow: none;
-}
-
-/* ホバー時の軽い透過（補助） */
-.header nav a:hover { opacity: 0.95; }
-
-
-
-/* メインビジュアル */
-.hero {
-  text-align: center;
-  padding: 120px 20px;
-  background: #f5f5f5;
-}
-
-.hero h2 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-/* セクション共通 */
-.section {
-  padding: 80px 60px;
-  text-align: center;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.section h2 {
-  margin-bottom: 40px;
-}
-
-/* 実績 */
-.works-grid {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-}
-
-.work-card {
-  width: 300px;
-}
-
-.work-card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-/* お問い合わせボタン */
-.contact-btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 15px 30px;
-  background: black;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-/* フッター */
-footer {
-  text-align: center;
-  padding: 30px;
-  border-top: 1px solid #eee;
-  margin-top: 60px;
-}
-
-/* About */
-.about {
-  max-width: 800px;
-  margin: 120px auto;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.about h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
-}
-
-.about p {
-  line-height: 2;
-  font-size: 16px;
-}
-
-.hero {
-  text-align: center;
-  padding: 120px 20px;
-}
-
-.hero h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  margin-bottom: 30px;
-}
-
-.cta-btn {
-  display: inline-block;
-  padding: 15px 30px;
-  background: #000;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.cta-btn:hover {
-  background: #333;
-}
-
-h2 {
-  font-size: 28px;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 28px;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-.work-card {
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  border-radius: 10px;
-  overflow: hidden;
-  transition: 0.3s;
+.header nav a{
+  display:inline-block;   /* ←これが超重要！！ */
   text-decoration:none;
   color:#222;
-  display:block;
+  font-weight:600;
+  padding:6px 10px;
+  transition: transform .2s ease;
 }
 
-.work-card:hover {
-  transform: translateY(-5px);
+/* メニュー：浮くだけ */
+.header nav a:hover{
+  transform: translateY(-4px);
+  background: transparent !important;
+  box-shadow: none !important;
+}
+/* =========================
+   HERO
+========================= */
+.hero{
+  text-align:center;
+  padding:120px 20px;
+  background:#f5f5f5;
 }
 
-/* Worksボタン */
-.work-btn{
+.hero h2{
+  font-size:36px;
+  margin-bottom:20px;
+}
+
+.hero-sub{
+  margin-bottom:30px;
+  font-size:18px;
+}
+
+.cta-btn{
   display:inline-block;
-  margin-top:15px;
-  padding:10px 18px;
+  padding:15px 30px;
+  background:#000;
+  color:#fff;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.cta-btn:hover{ background:#333; }
+
+/* =========================
+   セクション共通
+========================= */
+.section{
+  padding:80px 60px;
+  text-align:center;
+  max-width:1000px;
+  margin:0 auto;
+}
+
+/* =========================
+   Works（今回の主役🔥）
+========================= */
+.works-grid{
+  display:flex;
+  gap:30px;
+  justify-content:center;
+}
+
+/* カード本体 */
+.work-card{
+  width:300px;
+  background:#fff;
+  border-radius:12px;
+  padding:24px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+  /* ★ボタン位置を揃える魔法 */
+  display:flex;
+  flex-direction:column;
+}
+
+/* 画像 */
+.work-card img{
+  width:100%;
+  border-radius:10px;
+  margin-bottom:15px;
+}
+
+/* 説明文 */
+.work-card p{
+  flex-grow:1;   /* ← これが超重要！高さを揃える */
+}
+
+/* ボタン */
+.work-btn{
+  margin-top:20px;
+  padding:12px 22px;
+  background:#111;
+  color:#fff;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:600;
+  display:inline-block;
+  transition:.2s;
+}
+
+.work-btn:hover{
+  transform:translateY(-3px);
+  background:#333;
+}
+
+.work-info{
+  list-style:none;
+  padding:0;
+  margin:15px 0 5px;
+  text-align:left;
+  font-size:14px;
+  color:#555;
+}
+
+.work-info li{
+  margin-bottom:5px;
+}
+
+/* =========================
+   About
+========================= */
+.about{
+  max-width:800px;
+  margin:120px auto;
+  padding:0 20px;
+}
+
+.about p{
+  line-height:2;
+}
+
+/* =========================
+   Contact
+========================= */
+.contact-btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:15px 30px;
   background:#000;
   color:#fff;
   text-decoration:none;
   border-radius:6px;
-  font-size:14px;
-  transition:.3s;
 }
 
-.work-btn:hover{
+.contact-btn:hover{
   background:#333;
 }
-/* ===================================
-   📱 スマホ完全対応（最終版）
-   =================================== */
-@media (max-width: 768px){
 
-/* ===== ヘッダー ===== */
+.contact-lead{
+  margin-bottom:40px;
+  font-size:18px;
+}
+
+.contact-box{
+  max-width:600px;
+  margin:0 auto;
+  text-align:left;
+}
+
+.contact-box h3{
+  margin-top:30px;
+  margin-bottom:10px;
+}
+
+.contact-list{
+  padding-left:18px;
+  line-height:2;
+}
+
+.contact-note{
+  margin-top:25px;
+  text-align:center;
+}
+
+/* =========================
+   Footer
+========================= */
+footer{
+  text-align:center;
+  padding:30px;
+  border-top:1px solid #eee;
+  margin-top:60px;
+}
+
+/* =========================
+   📱スマホ対応
+========================= */
+@media (max-width:768px){
+
 .header{
-  flex-direction: column;
-  align-items: center;
+  flex-direction:column;
   padding:18px 20px;
 }
 
 .header nav ul{
-  flex-direction: column;
+  flex-direction:column;
   gap:12px;
 }
 
-.header nav a{
-  font-size:14px;
-}
-
-
-/* ===== HERO ===== */
 .hero{
   padding:70px 20px;
 }
 
-.hero h2{
-  font-size:22px;
-  line-height:1.6;
-}
+.hero h2{ font-size:22px; }
 
-.hero p{
-  font-size:14px;
-}
-
-.cta-btn{
-  padding:12px 22px;
-  font-size:14px;
-}
-
-
-/* ===== セクション共通 ===== */
 .section{
-  max-width:100%;
   padding:50px 20px;
 }
 
-h1{
-  font-size:28px;
-}
-
-h2{
-  font-size:22px;
-  margin-bottom:25px;
-}
-
-
-/* ===== Works ===== */
 .works-grid{
-  flex-direction: column;
+  flex-direction:column;
   align-items:center;
-  gap:25px;
 }
 
 .work-card{
@@ -279,40 +253,8 @@ h2{
   max-width:320px;
 }
 
-.work-card h3{
-  font-size:18px;
-  margin-top:15px;
-}
-
-.work-card p{
-  font-size:14px;
-}
-
-
-/* ===== About ===== */
-.about{
-  max-width:100%;
-  margin:60px auto;
-  padding:0 20px;
-}
-
-.about p{
-  font-size:14px;
-  line-height:1.9;
-}
-
-
-/* ===== Contact ===== */
-.contact-btn{
-  padding:12px 22px;
-  font-size:14px;
-}
-
-
-/* ===== Footer ===== */
 footer{
   font-size:12px;
-  margin-top:40px;
 }
 
 }
