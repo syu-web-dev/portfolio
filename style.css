@@ -218,6 +218,36 @@ footer{
   margin-top:60px;
 }
 
+.flow-list{
+  padding-left:18px;
+  line-height:2;
+  margin-top:10px;
+}
+
+/* =========================
+   Flow（制作の流れ）
+========================= */
+
+.flow-lead{
+  margin-bottom:40px;
+  font-size:18px;
+}
+
+.flow-steps{
+  max-width:700px;
+  margin:0 auto;
+  text-align:left;
+  padding-left:20px;
+}
+
+.flow-steps li{
+  margin-bottom:30px;
+}
+
+.flow-steps h3{
+  margin-bottom:8px;
+}
+
 /* =========================
    📱スマホ対応
 ========================= */
